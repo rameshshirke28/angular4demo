@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AppKit</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">    
+  <link rel="shortcut icon" href="assets/images/favicon.ico">  
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="assets/css/bootstrap.css">
+  <link rel="stylesheet" href="assets/css/metisMenu.css">
+  <link rel="stylesheet" href="assets/css/font-awesome.css">
+  <link rel="stylesheet" href="assets/css/elegant-icons.css">
+  <link rel="stylesheet" href="assets/css/pe-7-icons.css">
+  <link rel="stylesheet" href="assets/css/pe-7-icons-helper.css">
+  <link rel="stylesheet" href="assets/css/chosen.css">
+  <link rel="stylesheet" href="assets/css/tether-shepherd.css">
+  <link rel="stylesheet" href="assets/css/jstree-default.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>	
+<body class="preload" >	
+  <header class="header">
+    <div class="branding float-left">
+      <h1 class="logo text-center">
+        <a href="index.html">
+          <img class="logo-icon" src="assets/images/logo-icon.svg" alt="icon" />
+          <span class="nav-label">
+            <span class="highlight">App</span>Kit
+          </span>
+        </a>
+      </h1>
+    </div>
+    <div class="topbar">
+      <button  class="navbar-toggle" type="button" data-toggle="collapse" data-target="#header-nav">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+       <!--  <i class="icon fa fa-caret-left"></i> -->
+      </button>
+      <div class="navbar-tools">
+        <div class="user-container dropdown">
+          <div class="dropdown-toggle" id="dropdownMenu-user" data-toggle="dropdown" aria-expanded="true" role="button">
+            <img src="assets/images/profiles/profile-3.png" alt="" />
+            <i class="fa fa-caret-down"></i>
+          </div>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu-user" >
+            <li><span class="arrow"></span><a role="menuitem" href="user-profile.html"><span class="pe-icon pe-7s-user icon"></span>My Account</a></li>
+            <li><a role="menuitem" href="pricing.html"><span class="pe-icon pe-7s-paper-plane icon"></span>Upgrade Plan</a></li>
+            <li><a role="menuitem" href="login.html"><span class="pe-icon pe-7s-power icon"></span>Sign Out</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="collapse navbar-collapse" id="header-nav">
+        <ul class="nav navbar-nav">
+          <li><a href="users.html">Users</a></li>
+          <li class="active"><a href="members.html">Members</a></li>
+           <li><a href="forms.html">Forms</a></li>
+        </ul>
+      </div>
+      <!--  <div class="search-container">
+        <form id="main-search" class="main-search">
+          <i id="main-search-toggle" class="fa fa-search icon"></i>
+          <div id="main-search-input-wrapper" class="main-search-input-wrapper">
+            <input type="text" id="main-search-input" class="main-search-input form-control" placeholder="Search...">
+
+            <span id="clear-search" aria-hidden="true" class="fs1 icon icon_close_alt2 clear-search"></span>
+          </div>
+        </form>
+      </div> -->
+    </div>
+  </header>   	
+  <div id="content-wrapper" class="content-wrapper view tickets-view">
+    <div class="container-fluid">
+    <div class="row">
+    <div class="col-md-2 col-md-offset-10 col-xs-12 col-sm-12">
+       <div class="projects-heading">
+        <div >
+            <button class="btn btn-success actions" data-toggle="modal" data-target="#modal-new-ticket"><i class="fa fa-plus"></i> Add  Users</button>
+        </div>
+      </div>
+      </div>
+      </div>
+      <div id="masonry" class="row" style="position: relative; height: 708.25px;">
+        <div class="module-wrapper masonry-item col-lg-12 col-md-12 col-sm-12 col-xs-12" style="position: absolute; left: 0px; top: 0px;">
+          <section class="module module-headings">
+            <div class="module-inner">
+              <div class="module-heading">
+                <h3 class="module-title">Zero Configuration</h3>
+                <ul class="actions list-inline">
+                  <li><a class="collapse-module" data-toggle="collapse" href="#content-1" aria-expanded="true" aria-controls="content-1"><span aria-hidden="true" class="icon arrow_carrot-up"></span></a></li>
+                  <li><a class="close-module" href="#"><span aria-hidden="true" class="icon icon_close"></span></a></li>
+                </ul>
+
+              </div>
+
+              <div class="module-content collapse in" id="content-1" aria-expanded="true">
+                <div class="module-content-inner no-padding-bottom">
+                  <div class="table-responsive">
+                    <div id="datatables-1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap"><div class="row"><div class="col-sm-6"><div class="dataTables_length" id="datatables-1_length"><label>Show <select name="datatables-1_length" aria-controls="datatables-1" class="form-control input-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div><div class="col-sm-6"><div id="datatables-1_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control input-sm" placeholder="" aria-controls="datatables-1"></label></div></div></div><div class="row"><div class="col-sm-12"><table id="datatables-1" class="table table-striped display dataTable" role="grid" aria-describedby="datatables-1_info">
+                    <thead>
+                      <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="datatables-1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 165px;">Name</th><th class="sorting" tabindex="0" aria-controls="datatables-1" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 268px;">Position</th><th class="sorting" tabindex="0" aria-controls="datatables-1" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 119px;">Office</th><th class="sorting" tabindex="0" aria-controls="datatables-1" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 54px;">Age</th><th class="sorting" tabindex="0" aria-controls="datatables-1" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 116px;">Start date</th><th class="sorting" tabindex="0" aria-controls="datatables-1" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 94px;">Salary</th></tr>
+                    </thead>
+                    <tfoot>
+                      <tr><th rowspan="1" colspan="1">Name</th><th rowspan="1" colspan="1">Position</th><th rowspan="1" colspan="1">Office</th><th rowspan="1" colspan="1">Age</th><th rowspan="1" colspan="1">Start date</th><th rowspan="1" colspan="1">Salary</th></tr>
+                    </tfoot>
+                    <tbody>
+
+                      <tr role="row" class="odd">
+                        <td class="sorting_1">Airi Satou</td>
+                        <td>Accountant</td>
+                        <td>Tokyo</td>
+                        <td>33</td>
+                        <td>2008/11/28</td>
+                        <td>$162,700</td>
+                      </tr><tr role="row" class="even">
+                      <td class="sorting_1">Angelica Ramos</td>
+                      <td>Chief Executive Officer (CEO)</td>
+                      <td>London</td>
+                      <td>47</td>
+                      <td>2009/10/09</td>
+                      <td>$1,200,000</td>
+                    </tr><tr role="row" class="odd">
+                    <td class="sorting_1">Ashton Cox</td>
+                    <td>Junior Technical Author</td>
+                    <td>San Francisco</td>
+                    <td>66</td>
+                    <td>2009/01/12</td>
+                    <td>$86,000</td>
+                  </tr><tr role="row" class="even">
+                  <td class="sorting_1">Bradley Greer</td>
+                  <td>Software Engineer</td>
+                  <td>London</td>
+                  <td>41</td>
+                  <td>2012/10/13</td>
+                  <td>$132,000</td>
+                </tr><tr role="row" class="odd">
+                <td class="sorting_1">Brenden Wagner</td>
+                <td>Software Engineer</td>
+                <td>San Francisco</td>
+                <td>28</td>
+                <td>2011/06/07</td>
+                <td>$206,850</td>
+              </tr><tr role="row" class="even">
+              <td class="sorting_1">Brielle Williamson</td>
+              <td>Integration Specialist</td>
+              <td>New York</td>
+              <td>61</td>
+              <td>2012/12/02</td>
+              <td>$372,000</td>
+            </tr><tr role="row" class="odd">
+            <td class="sorting_1">Bruno Nash</td>
+            <td>Software Engineer</td>
+            <td>London</td>
+            <td>38</td>
+            <td>2011/05/03</td>
+            <td>$163,500</td>
+          </tr><tr role="row" class="even">
+          <td class="sorting_1">Caesar Vance</td>
+          <td>Pre-Sales Support</td>
+          <td>New York</td>
+          <td>21</td>
+          <td>2011/12/12</td>
+          <td>$106,450</td>
+        </tr><tr role="row" class="odd">
+        <td class="sorting_1">Cara Stevens</td>
+        <td>Sales Assistant</td>
+        <td>New York</td>
+        <td>46</td>
+        <td>2011/12/06</td>
+        <td>$145,600</td>
+      </tr><tr role="row" class="even">
+      <td class="sorting_1">Cedric Kelly</td>
+      <td>Senior Javascript Developer</td>
+      <td>Edinburgh</td>
+      <td>22</td>
+      <td>2012/03/29</td>
+      <td>$433,060</td>
+    </tr></tbody>
+  </table></div></div><div class="row"><div class="col-sm-5"><div class="dataTables_info" id="datatables-1_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div></div><div class="col-sm-7"><div class="dataTables_paginate paging_simple_numbers" id="datatables-1_paginate"><ul class="pagination"><li class="paginate_button previous disabled" id="datatables-1_previous"><a href="#" aria-controls="datatables-1" data-dt-idx="0" tabindex="0">Previous</a></li><li class="paginate_button active"><a href="#" aria-controls="datatables-1" data-dt-idx="1" tabindex="0">1</a></li><li class="paginate_button "><a href="#" aria-controls="datatables-1" data-dt-idx="2" tabindex="0">2</a></li><li class="paginate_button "><a href="#" aria-controls="datatables-1" data-dt-idx="3" tabindex="0">3</a></li><li class="paginate_button "><a href="#" aria-controls="datatables-1" data-dt-idx="4" tabindex="0">4</a></li><li class="paginate_button "><a href="#" aria-controls="datatables-1" data-dt-idx="5" tabindex="0">5</a></li><li class="paginate_button "><a href="#" aria-controls="datatables-1" data-dt-idx="6" tabindex="0">6</a></li><li class="paginate_button next" id="datatables-1_next"><a href="#" aria-controls="datatables-1" data-dt-idx="7" tabindex="0">Next</a></li></ul></div></div></div></div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+
+<!-- Modal (New Ticket) -->
+<div class="modal" id="modal-new-ticket" tabindex="-1" role="dialog" aria-labelledby="modal-new-ticket-label">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="modal-new-ticket-label">Create New Ticket</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label class="sr-only">Ticket Name</label>
+            <input type="text" class="form-control" placeholder="Ticket Name">
+          </div>
+          <div class="form-group">
+            <label class="sr-only">Description</label>
+            <textarea class="form-control" rows="6" placeholder="Enter your description..."></textarea>    
+          </div>
+          <div class="form-group">
+            <select class="chosen form-control" data-placeholder="Choose assignees..." style="width: 100%;" multiple >
+              <option value="">Please Select</option>
+              <option value="Vincent Alexander">Vincent Alexander</option>
+              <option value="Lisa Price">Lisa Price</option>
+              <option value="Anthony Delgado">Anthony Delgado</option>
+              <option value="Ralph Franklin">Ralph Franklin</option>
+              <option value="Amanda Guerrero">Amanda Guerrero</option>
+              <option value="Stephen Thompson">Stephen Thompson</option>
+            </select>
+          </div>
+          <button type="button" class="btn btn-success margin-top-md center-block" data-dismiss="modal">Create Ticket</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div><!--//modal-->
+<footer id="footer" class="site-footer" style="display:none">
+  <div class="copyright">Copyright &copy; 2016 - <a href="#">Bootstrap Admin Theme</a></div>
+</footer>		<div id="side-panel" class="side-panel" >
+<div class="side-panel-inner">
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close" ><span aria-hidden="true">&times;</span></button>
+  <h4 class="title text-center"><i class="fa fa-signal"></i>Activities</h4>
+  <div class="items-wrapper">
+    <div class="item">
+      <div class="symbol-holder">
+        <button class="icon-container btn btn-warning btn-circle">
+          <i class="icon fa fa-flag"></i>
+        </button>
+      </div>
+      <div class="content-holder">
+        <div class="subject-line">
+          <strong>We have increased your storage to 10GB for Free!</strong>
+        </div>
+        <div class="excerpt">
+          System notification
+        </div>
+        <div class="time-stamp">5 days ago</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="symbol-holder">
+        <img class="user-profile" src="assets/images/profiles/profile-20.png" alt="" />
+      </div>
+      <div class="content-holder">
+        <div class="subject-line">
+          <a class="name" href="member.html">David Thomson</a> followed you.
+        </div>
+        <div class="excerpt">
+          <div class="role">Full-Stack Developer</div>
+          <div class="folowers"><span>12 Projects</span> | <span class="folowers">43 Followers</span></div>
+        </div>
+        <div class="time-stamp">3 mins ago</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="symbol-holder">
+        <button class="icon-container btn btn-danger btn-circle">
+          <i class="icon fa fa-heart"></i>
+        </button>
+      </div>
+      <div class="content-holder">
+        <div class="subject-line">
+          <a class="name" href="#">Julie Wu</a> favourited your post.
+        </div>
+        <div class="excerpt">
+          <div class="quote-text"><em>"Love your new design! Keep up the great work..."</em></div>
+        </div>
+        <div class="time-stamp">1 week ago</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="symbol-holder">
+        <img class="user-profile" src="assets/images/profiles/profile-15.png" alt="" />
+      </div>
+      <div class="content-holder">
+        <div class="subject-line">
+          <a class="name" href="#">Julie Wu</a> followed you.
+        </div>
+        <div class="excerpt">
+          <div class="role">Product Designer</div>
+          <div class="folowers"><span>3 Projects</span> | <span class="folowers">8 Followers</span></div>
+        </div>
+        <div class="time-stamp">2 weeks ago</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="symbol-holder">
+        <button class="icon-container btn btn-info btn-circle">
+          <i class="icon fa fa-at"></i>
+        </button>
+      </div>
+      <div class="content-holder">
+        <div class="subject-line">
+          <a class="name" href="#">James Lee</a> mentioned you on <a href="#">Project Lorem</a>.
+        </div>
+        <div class="excerpt">
+          <div class="quote-text"><em>"Looks cool @Rebecca White"</em></div>
+        </div>
+        <div class="time-stamp">2 weeks ago</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="symbol-holder">
+        <button class="icon-container btn btn-success btn-circle">
+          <i class="icon fa fa-commenting"></i>
+        </button>
+      </div>
+      <div class="content-holder">
+        <div class="subject-line">
+          <a class="name" href="#">Chris Adams</a> commented on <a href="#">Discussion Lorem</a>.
+        </div>
+        <div class="excerpt">
+          <div class="quote-text"><em>"Can we improve the review process? At the moment consectetuer adipiscing elit..."</em></div>
+        </div>
+        <div class="time-stamp">Jan 10, 2016</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="symbol-holder">
+        <button class="icon-container btn btn-pink btn-circle">
+          <i class="icon fa fa-thumbs-up"></i>
+        </button>
+      </div>
+      <div class="content-holder">
+        <div class="subject-line">
+          <a class="name" href="#">Kat Schultz</a> liked your discussion <a href="#">Discussion Lorem</a>.
+        </div>
+        <div class="time-stamp">Jan 8, 2016</div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>	
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/metisMenu.js"></script>
+<script src="assets/js/imagesloaded.js"></script>
+<script src="assets/js/masonry.js"></script>
+<script src="assets/js/pace.js"></script>
+<script src="assets/js/chosen-jquery.js"></script>
+<script src="assets/js/tether.js"></script>
+<script src="assets/js/tether-shepherd.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/tour.js"></script>
+<script src="assets/js/demo.js"></script>
+<script src="assets/js/forms-chosen.js"></script>
+</body>
+</html>
